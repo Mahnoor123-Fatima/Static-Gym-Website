@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+    body {
+        font-family: 'Baloo Bhai 2', cursive;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+
+    }
+
+    .left {
+
+        display: inline-block;
+        /*border: 2px solid red;*/
+        position: absolute;
+        left: 70px;
+        top: 7px;
+
+    }
+
+    .left img {
+
+        width: 128px;
+        filter: invert(100%);
+    }
+
+    .left div {
+
+        line-height: 0px;
+        font-size: 21px;
+        text-align: center;
+
+
+    }
+
+    .mid {
+        display: block;
+        width: 36%;
+        margin: 20px auto;
+        /* border: 2px solid green;*/
+    }
+
+    .right {
+        position: absolute;
+        right: 34px;
+        top: 20px;
+        display: inline-block;
+        /* border: 2px solid yellow;*/
+    }
+
+    .navbar {
+
+        display: inline-block;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 34px 10px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: gray;
+    }
+
+    .btn {
+        font-family: 'Baloo Bhai 2', cursive;
+        margin: 7px 9px;
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid gray;
+        border-radius: 10px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .btn1 {
+
+        font-family: 'Baloo Bhai 2', cursive;
+        margin: 4px 0px;
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid gray;
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: rgb(68, 64, 64);
+    }
+
+
+    .container {
+        display: flex;
+        height: 350px;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgb(56, 56, 58);
+        margin-top: 80px;
+        align-items: center;
+        justify-content: center;
+        /*box-shadow: 2px 2px 5px white;*/
+        border: 2px solid white;
+    }
+
+    .container h1 {
+        font-size: 5rem;
+        text-shadow: 6px 6px 6px black;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+
+    .contact-form {
+
+        display: flex;
+        height: 800px;
+        width: 1100px;
+        /*  border: 2px solid red;*/
+        margin-top: 90px;
+        margin-right: 50px;
+        margin-left: 100px;
+        background-color: rgb(224, 212, 212);
+        transition: all 2s ease-in-out;
+
+    }
+
+ 
+
+    .contact-form:hover {
+        box-shadow: 10px 13px 10px 5px rgb(71, 67, 67);
+
+        /*  background-color: rgb(128, 117, 117);
+      transform: translateY(-40px);
+       /* transform: rotateY(360deg);*/
+       transform: scale(0.9);
+
+    }
+
+    .contact-information {
+        width: 550px;
+        height: 800px;
+        background-color: rgb(56, 56, 58);
+        box-shadow: 3px 3px 20px rgb(24, 23, 23);
+
+        padding: 0px;
+
+    }
+
+    .contact-information h1 {
+        display: inline;
+        padding-left: 120px;
+        text-shadow: 5px 5px 6px black;
+        text-align: center;
+
+    }
+
+    .tables {
+        padding-left: 120px;
+        padding-top: 100px;
+    }
+
+    .tables th {
+        color: white;
+        font-size: 30px;
+        text-shadow: 5px 5px 6px black;
+    }
+
+    .tables td {
+        color: rgb(197, 195, 195);
+    }
+
+    /*  .map{
+        display: inline-block;
+        height: 800px;
+        width: 500px;
+        border: 2px solid red;
+        margin-top: 90px; 
+        margin-left: 70px;
+    }
+*/
+
+
+    .web-footer {
+        background-color: rgb(56, 56, 58);
+        height: 500px;
+        display: flex;
+        margin-top: 100px;
+
+
+    }
+
+    .contact {
+
+
+
+        height: 200px;
+        width: 300px;
+
+        margin: 48px 0px;
+        padding: 70px;
+
+
+    }
+
+
+    .address {
+        color: darkgray;
+        margin-bottom: 30px;
+
+    }
+
+    ul.contact-info {
+        list-style-type: none;
+
+    }
+
+    ul {
+        padding-inline-start: 0px;
+    }
+
+    .contact-info li {
+        margin: 10px 0px;
+
+    }
+
+    .contact-info li a {
+        color: darkgray;
+        text-decoration: none;
+        padding: 30px 0px;
+
+
+
+    }
+
+    .contact-info li a:hover {
+        text-decoration: underline;
+        color: white;
+    }
+
+    .sources {
+
+        height: 200px;
+        width: 300px;
+
+        margin: 45px 40px;
+        padding: 70px;
+
+    }
+
+    ul.sources-info {
+        list-style-type: none;
+    }
+
+    .sources-info {
+        margin: 10px 0px;
+
+    }
+
+    .sources-info li {
+        margin: 10px 0px;
+    }
+
+    .sources-info li a {
+        color: darkgray;
+        text-decoration: none;
+        padding: 30px 0px;
+    }
+
+    .sources-info li a:hover {
+        text-decoration: underline;
+        color: white;
+    }
+
+    .contact h1 {
+        text-shadow: 4px 4px 4px black;
+    }
+
+    .sources h1 {
+        text-shadow: 4px 4px 4px black;
+    }
+
+    .Links {
+
+        height: 200px;
+        width: 300px;
+
+        margin: 45px 0px;
+        padding: 70px;
+
+    }
+
+    .Links h1 {
+        text-shadow: 4px 4px 4px black;
+    }
+
+    ul.Links-info {
+        list-style-type: none;
+    }
+
+    .Links-info li {
+        margin: 10px 0px;
+    }
+
+    .Links-info li a {
+        color: darkgray;
+        text-decoration: none;
+        padding: 30px 0px;
+    }
+
+    .Links-info li a:hover {
+        text-decoration: underline;
+        color: white;
+    }
+
+    .fa {
+        padding: 10px;
+        font-size: 12px;
+        width: 10px;
+        text-align: center;
+        text-decoration: none;
+        margin: 3px 1px;
+        border-radius: 50%;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+    }
+
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+    }
+
+
+    h6 {
+
+
+        padding-left: 0px;
+        color: black;
+        font-size: 20px;
+    }
+
+    .form-div {
+        display: inline-block;
+        height: 800px;
+        width: 600px;
+        margin-top: 0px;
+        padding-left: 50px;
+       
+    }
+
+    .form-group {
+        color: rgb(56, 56, 58);
+        font-size: 20px;
+    }
+
+    .form-group input {
+        font-family: 'Baloo Bhai 2', cursive;
+        text-align: center;
+        display: block;
+        width: 308px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 5px 0px;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+
+    .form-group textarea {
+        font-family: 'Baloo Bhai 2', cursive;
+        text-align: center;
+        display: block;
+        width: 308px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 5px 0px;
+        font-size: 15px;
+        border-radius: 8px;
+        color: rgb(107, 101, 101);
+    }
+
+    .btn1 {
+
+        font-family: 'Baloo Bhai 2', cursive;
+        margin: 4px 0px;
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid gray;
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .btn1:hover {
+        background-color: rgb(68, 64, 64);
+    }
+</style>
+
+<body>
+    <header>
+        <!--left box for logo-->
+        <div class="left">
+            <img src="images/gym1.png" alt="">
+            <div>Aim Fitness</div>
+        </div>
+        <!--mid box for navigation bar-->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html" >About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </div>
+        <!--right box for buttons-->
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+
+    </header>
+
+    <div class="container">
+        <h1>Get in touch</h1>
+        Want to get in touch? We'd love to hear from you. Here'show you can reach us . . .
+    </div>
+
+    <div class="contact-form">
+        <div class="contact-information">
+            <br>
+            <br>
+            <h1>Contact Information</h1>
+            <table class="tables">
+                <tr>
+                    <th>Address:</th>
+
+                    <td><br><br>Islamabad-01,Street#02,F-9</td>
+                </tr>
+            </table>
+
+            <table class="tables">
+                <tr>
+                    <th>Phone:</th>
+                    <td><br><br>051-3457889-98</td>
+                </tr>
+            </table>
+
+            <table class="tables">
+                <tr>
+                    <th>E-mail:</th>
+                    <td><br><br>Aimfitness@gmail.com</td>
+                </tr>
+            </table>
+
+
+        </div>
+
+
+        <div class="form-div">
+            <form action="noaction.php">
+                <h6>Drop us a line or visit us for a cup of coffee<br>We glad to see our friends!</h6>
+                <div class="form-group">
+                    Name:
+                    <br> <input type="text" name="" placeholder="Enter your Name">
+                </div>
+                <br>
+                <div class="form-group">
+                    Email:
+                    <br> <input type="text" name="" placeholder="Enter your Email">
+                </div>
+                <br>
+                <div class="form-group">
+                    Phone:
+                    <br> <input type="number" name="" placeholder="Enter your Number">
+                </div>
+                <br>
+                <div class="form-group">
+                    Comments:
+                    <br> <textarea id="" name="" rows="5" cols="40">write your Message here</textarea>
+                </div>
+                <br>
+                <button class="btn1">Submit</button>
+               
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!--<div class="map"></div>-->
+
+
+    <footer>
+        <div class="web-footer">
+            <div class="contact">
+                <h1>Contact</h1>
+                <div class="address">43 Raymouth Rd. Baltemoer, London 3910</div>
+
+                <ul class="contact-info">
+
+                    <li><a href="#">+1(123)-456-7890</a></li>
+                    <li><a href="#">+1(123)-456-7890</a></li>
+                    <li><a href="#">info@mydomain.com</a></li>
+                </ul>
+            </div>
+            <div class="sources">
+                <h1>Sources</h1>
+                <ul class="sources-info">
+
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Fitness Calculator</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Vision</a></li>
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Privacy and Terms</a></li>
+                </ul>
+            </div>
+
+            <div class="Links">
+                <h1>Links</h1>
+                <ul class="Links-info">
+
+                    <li><a href="#">Our Vision</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
